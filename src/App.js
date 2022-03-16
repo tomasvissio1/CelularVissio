@@ -2,13 +2,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar';
+import IntemListContainer from './components/containerComponents/ItemListContainer';
 
 function App() {
   return (
     <div className="App" onClick={()=>console.log('soy evento')}>
       <NavBar />
-      <header className="App-header" style={{'backgroundColor':"white"}}>
-        
+      <IntemListContainer saludo='hola mundo'/>
+     {/*  <header className="App-header" style={{'backgroundColor':"white"}}>
+          
         
         <img src={logo} className="App-logo" alt="logo"  />
         <p>
@@ -22,7 +24,7 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
     </div>
   );
 }
