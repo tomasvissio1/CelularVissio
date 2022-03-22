@@ -3,12 +3,14 @@ import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar';
 import IntemListContainer from './components/containerComponents/ItemListContainer';
+import ItemCount from './components/ItemCount/ItemCount';
 
 function App() {
   return (
-    <div className="App" onClick={()=>console.log('soy evento')}>
+    <div className="App" /* onClick={()=>console.log('soy evento')} */>
       <NavBar />
-      <IntemListContainer saludo='hola mundo'/>
+      {/* <IntemListContainer saludo='hola mundo'/> */}
+      <ItemCount/>
      {/*  <header className="App-header" style={{'backgroundColor':"white"}}>
           
         
