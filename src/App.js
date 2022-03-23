@@ -1,9 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar';
 import IntemListContainer from './components/containerComponents/ItemListContainer';
 import ItemCount from './components/ItemCount/ItemCount';
+import Promises from './components/promises/Promises';
+import ItemList from './components/itemList/ItemList';
+import Item from './components/itemList/Item';
 
 function App() {
   return (
@@ -11,6 +13,11 @@ function App() {
       <NavBar />
       {/* <IntemListContainer saludo='hola mundo'/> */}
       <ItemCount/>
+      {/* <Promises/> */}
+      <ItemList/>
+      {/* <Item/> */}
+      
+      
      {/*  <header className="App-header" style={{'backgroundColor':"white"}}>
           
         
