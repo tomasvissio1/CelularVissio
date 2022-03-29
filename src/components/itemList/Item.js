@@ -11,6 +11,7 @@ function Item({nombres,caracteristicas,imgs,precio}) {
                 <h5 className="card-title">{nombres}</h5>
                 <p className="card-text">{caracteristicas}</p>
                 <h5 className="card-title">{precio}</h5>
+                <a href="#" className="btn btn-primary">Detalles</a>
             </div>
         </div>
   </div>

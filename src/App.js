@@ -6,6 +6,7 @@ import ItemCount from './components/ItemCount/ItemCount';
 import Promises from './components/promises/Promises';
 import ItemList from './components/itemList/ItemList';
 import Item from './components/itemList/Item';
+import ItemDetailContainer from './components/itemDetailContainer/ItemDetailContainer';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <ItemCount/>
       {/* <Promises/> */}
       <ItemList/>
+      <ItemDetailContainer/>
       {/* <Item/> */}
       
       

@@ -1,0 +1,18 @@
+[{"id":"1","marca":"iphone 6","precio":20000,"imagen":"imagenes/ip6.png","caracteristicas":"Bat. 86% / 4.7 Pulgadas / Cámara: 12MP - frontal:5MP / 2GB RAM + 16GB interna / Apple A8 1.4 GHz"},
+    {"id":"1","marca":"iphone 7","precio":30000,"imagen":"imagenes/ip7plus.png","caracteristicas":"'4 ram/ procesador tanto /  tanto'"},
+    {"id":"1","marca":"iphone 8","precio":40000,"imagen":"imagenes/ip8.png","caracteristicas":"'4 ram/ procesador tanto / camaras de tanto'"},
+    {"id":"1","marca":"iphone x","precio":50000,"imagen":"imagenes/ip10.png","caracteristicas":"'4 ram/ procesador tanto /camaras de tanto'"},
+    {"id":"1","marca":"iphone 11","precio":60000,"imagen":"imagenes/ip11.png","caracteristicas":"'4 ram/ procesador tanto /camaras de tanto'"},
+    {"id":"1","marca":"iphone 12","precio":70000,"imagen":"imagenes/ip12.png","caracteristicas":"'4 ram/ procesador tanto / camara de tanto'"},
+    {"id":"2","marca":"Samsung a49","precio":20000,"imagen":"imagenes/a49.png","caracteristicas":"'4 ram/ procesador tanto / '"},
+    {"id":"2","marca":"Samsung a50","precio":50000,"imagen":"imagenes/a50.png","caracteristicas":"'4 ram/ procesador tanto / '"},
+    {"id":"2","marca":"Samsung a51","precio":60000,"imagen":"imagenes/a51.png","caracteristicas":"'4 ram/ procesador tanto / '"},
+    {"id":"2","marca":"Samsung a52","precio":70000,"imagen":"imagenes/a52.png","caracteristicas":"'4 ram/ procesador tanto / '"},
+    {"id":"3","marca":"Xiaomi note8","precio":20000,"imagen":"imagenes/xinote8.png","caracteristicas":"'4 ram/ procesador tanto / '"},
+    {"id":"3","marca":"Xiaomi note9","precio":30000,"imagen":"imagenes/xinote9.png","caracteristicas":"'4 ram/ procesador tanto / '"},
+    {"id":"3","marca":"Xiaomi note10","precio":40000,"imagen":"imagenes/xinote10.png","caracteristicas":"'4 ram/ procesador tanto / '"},
+    {"id":"3","marca":"Xiaomi note10pro","precio":50000,"imagen":"imagenes/xinote10pro.png","caracteristicas":"'4 ram/ procesador tanto / '"},
+    {"id":"3","marca":"Xiaomi note10s","precio":60000,"imagen":"imagenes/xinote10s.png","caracteristicas":"'4 ram/ procesador tanto / '"},
+    {"id":"3","marca":"Xiaomi POCO F3","precio":70000,"imagen":"imagenes/xipocof3.png","caracteristicas":"'4 ram/ procesador tanto / '"},
+    {"id":"3","marca":"Xiaomi POCO M3","precio":80000,"imagen":"imagenes/xipocom3.png","caracteristicas":"'4 ram/ procesador tanto / '"}
+]

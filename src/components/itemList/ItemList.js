@@ -26,6 +26,14 @@ function ItemList() {
       },[]);
     }, 4000);
 
+
+    /* useEffect(()=>{
+      fetch('archivosPrueba.json')
+      .then(datas => datas.json())
+      .then(otra => console.log(otra))
+      
+    },[]) */
+
     
   return (
     <div>
