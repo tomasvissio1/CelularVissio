@@ -5,38 +5,28 @@ import IntemListContainer from './components/containerComponents/ItemListContain
 import ItemCount from './components/ItemCount/ItemCount';
 import Promises from './components/promises/Promises';
 import ItemList from './components/itemList/ItemList';
+import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import Item from './components/itemList/Item';
 import ItemDetailContainer from './components/itemDetailContainer/ItemDetailContainer';
 
 function App() {
   return (
-    <div className="App" /* onClick={()=>console.log('soy evento')} */>
+    <BrowserRouter>
       <NavBar />
-      {/* <IntemListContainer saludo='hola mundo'/> */}
-      <ItemCount/>
-      {/* <Promises/> */}
-      <ItemList/>
-      <ItemDetailContainer/>
-      {/* <Item/> */}
-      
-      
-     {/*  <header className="App-header" style={{'backgroundColor':"white"}}>
-          
-        
-        <img src={logo} className="App-logo" alt="logo"  />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
-    </div>
+        <Routes>
+          <Route path='/' element={
+           <ItemList/>}/>
+              
+          <Route path='/:detalleId' element={
+            <ItemDetailContainer/>
+          }/>
+
+
+          <Route path='/carrito' element={
+            <ItemCount/>
+          }/>
+        </Routes>
+    </BrowserRouter>
   );
 }
 

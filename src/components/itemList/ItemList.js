@@ -36,7 +36,7 @@ function ItemList() {
 
     
   return (
-    <div>
+    <div style={{"display":"flex"}}>
 
         {
         consulta ? ( 
@@ -44,12 +44,13 @@ function ItemList() {
             {
               products.map((product) => {
                 return (
-                  <div key={product.id}>
+                  <div key={product.id} >
                     <Item
                       nombres={product.nombre}
                       imgs={product.img} 
                       caracteristicas={product.caracteristica}
                       precio = {product.precio}
+                      id={product.id}
                     />
                   </div>
                 );
