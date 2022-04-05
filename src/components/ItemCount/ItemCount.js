@@ -39,13 +39,15 @@ function ItemCount() {
                     <div style={{"display":"flex"}}>
                             <div>
                                 <Link to={`/`}>
-                                <button onClick={onAdd} >Seguir comprando</button>
-                                
+                                 <button onClick={onAdd} >Seguir comprando</button>
                                 </Link>
                                 
                             </div>
                             <div>
-                            <button onClick={onAdd} >ir al cart</button>
+                                <Link to={`/cart`}>
+                                    <button onClick={onAdd} >ir al cart</button>
+                                </Link>
+                            
                             </div>
 
                     </div>
