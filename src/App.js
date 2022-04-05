@@ -8,11 +8,13 @@ import ItemList from './components/itemList/ItemList';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import Item from './components/itemList/Item';
 import ItemDetailContainer from './components/itemDetailContainer/ItemDetailContainer';
+import  Movimiento  from './components/movimientoMouse/Movimiento';
 
 function App() {
   return (
     <BrowserRouter>
       <NavBar />
+      <Movimiento/>
         <Routes>
           <Route path='/' element={
            <ItemList/>}/>
@@ -22,9 +24,9 @@ function App() {
           }/>
 
 
-          <Route path='/carrito' element={
+          {/* <Route path='/carrito' element={
             <ItemCount/>
-          }/>
+          }/> */}
         </Routes>
     </BrowserRouter>
   );
