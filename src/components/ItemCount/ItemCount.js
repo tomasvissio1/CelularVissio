@@ -1,13 +1,24 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import {useState} from 'react'
 import { Link } from 'react-router-dom'
 import "./ItemCount.css"
+import { CartContext } from "../context/CartContext";
+
 
 
 let activado=false
-function ItemCount() {
+let igual=false
+function ItemCount({nombre,id}) {
+
+    const {addToCart,cartList} = useContext(CartContext)
+
+
+
     const [numero, numeroEstado] = useState(1)
     const [activador,setActivador] = useState()
+
+    const [nombreProducto,setNombre] = useState(nombre)
+    const [idProducto,setId] = useState(id)
     
     function sumar (){
         if(numero<=9){
@@ -23,7 +34,23 @@ function ItemCount() {
     function onAdd(){
         activado=true
         setActivador(activado)
+        addToCart({nombreProducto, numero,idProducto})
+        
+        if (cartList!=null) {
+            for (let i = 0; i < cartList.length; i++) {
+                if (cartList[i].idProducto==idProducto) {
+                    let cantidad=cartList[i].numero;
+                    cantidad=cantidad+numero
+                    cartList[i].numero=cantidad
+                    cartList.pop()
+                }
+                
+            }
+        }
+        
     }
+    console.log("el id es"+idProducto)
+    
     
   return (
     <section>
@@ -39,13 +66,13 @@ function ItemCount() {
                     <div style={{"display":"flex"}}>
                             <div>
                                 <Link to={`/`}>
-                                 <button onClick={onAdd} >Seguir comprando</button>
+                                 <button /* onClick={onAdd} */ >Seguir comprando</button>
                                 </Link>
                                 
                             </div>
                             <div>
                                 <Link to={`/cart`}>
-                                    <button onClick={onAdd} >ir al cart</button>
+                                    <button /* onClick={onAdd} */ >ir al cart</button>
                                 </Link>
                             
                             </div>

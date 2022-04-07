@@ -27,7 +27,6 @@ function ItemDetailContainer() {
       })
         .catch("no anda")
     },[]) 
-    console.log(detalleId)
   return (
     <div>
       
@@ -35,6 +34,7 @@ function ItemDetailContainer() {
           <div>
             <ItemDetail
                 nombre={products[detalleId].caracteristicas}
+                id={products[detalleId].id}
             />
           </div>
         ):(
