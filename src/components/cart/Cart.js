@@ -9,7 +9,7 @@ function Cart() {
 
 
   return (
-    <div>{cartList.map(prod=><li key={prod.idProducto}>nombre:{prod.nombreProducto}+ cantidad:{prod.numero}</li>)}</div>
+    <div>{cartList.map(prod=><li key={prod.idProducto}>nombre:{prod.nombreProducto}+ cantidad:{prod.numero}<button id={prod.idProducto} >eliminar</button></li>)}</div>
   )
 }
 

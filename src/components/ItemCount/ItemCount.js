@@ -32,11 +32,33 @@ function ItemCount({nombre,id}) {
         }
     }
     function onAdd(){
-        activado=true
+        activado=false
         setActivador(activado)
-        addToCart({nombreProducto, numero,idProducto})
+        if (activado!=true) {
+            for (let i = 0; i < cartList.length; i++) {
+                if (cartList[i].idProducto==idProducto) {
+                    let cantidad=cartList[i].numero;
+                        cantidad=cantidad+numero
+                        cartList[i].numero=cantidad
+                        activado=true
+                        break
+                }
+            }
+        }
+        if(activado!=true){
+            addToCart({nombreProducto, numero,idProducto})
+            console.log(cartList)
+            activado=true
+            setActivador(activado)
+        }
+        if (activado) {
+            setActivador(activado)
+        }
         
-        if (cartList!=null) {
+        
+        
+        
+       /*  if (cartList!=null) {
             for (let i = 0; i < cartList.length; i++) {
                 if (cartList[i].idProducto==idProducto) {
                     let cantidad=cartList[i].numero;
@@ -46,7 +68,7 @@ function ItemCount({nombre,id}) {
                 }
                 
             }
-        }
+        } */
         
     }
     console.log("el id es"+idProducto)
