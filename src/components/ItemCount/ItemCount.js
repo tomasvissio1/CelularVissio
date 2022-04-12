@@ -33,6 +33,7 @@ function ItemCount({nombre,id,precio}) {
         }
     }
     function onAdd(){
+        traerInfo(parseInt(idProducto))
         calcularTotal(total+precio*numero)
         console.log("el total"+total)
         activado=false
@@ -57,7 +58,7 @@ function ItemCount({nombre,id,precio}) {
         if (activado) {
             setActivador(activado)
         }
-        traerInfo(idProducto)
+        
         
         
         

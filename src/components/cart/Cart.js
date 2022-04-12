@@ -17,8 +17,9 @@ function Cart() {
       
     }else{
       activado=false
+      setActivar(activado)
     }
-    setActivar(activado)
+    
     console.log(cartList)
   },[])
 
@@ -32,7 +33,7 @@ function Cart() {
           <><div>{cartList.map(prod => <li key={prod.idProducto}>nombre:{prod.nombreProducto}+ cantidad:{prod.numero}
             <button id={prod.idProducto} onClick={remover}>eliminar</button></li>)}
           </div><div>
-          <h1>{total}</h1>
+          <h1>total: {total}</h1>
             </div></>
         )}
     </div>

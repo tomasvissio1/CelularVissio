@@ -10,7 +10,6 @@ function CartContextProvider({children}) { //componente
     const [infos, setInfo] = useState()
     const [booleana,setBooleana] = useState()
     const [total,setTotal] = useState(0)
-    const [total2,setTotal2] = useState()
     let unidad=0
     const addToCart = (item)=>{
         setcartList([
@@ -28,9 +27,8 @@ function CartContextProvider({children}) { //componente
         setInfo(idProducto)
     }
     
-    function remover(){
-        
-        cartList.splice(infos)
+    const  remover=(info)=>{
+        cartList.splice(info)
         setcartList(cartList)
         setBooleana(true)
     }
