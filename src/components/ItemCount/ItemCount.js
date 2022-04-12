@@ -8,9 +8,9 @@ import { CartContext } from "../context/CartContext";
 
 let activado=false
 let igual=false
-function ItemCount({nombre,id}) {
+function ItemCount({nombre,id,precio}) {
 
-    const {addToCart,cartList} = useContext(CartContext)
+    const {addToCart,cartList,traerInfo,calcularTotal,total} = useContext(CartContext)
 
 
 
@@ -19,6 +19,7 @@ function ItemCount({nombre,id}) {
 
     const [nombreProducto,setNombre] = useState(nombre)
     const [idProducto,setId] = useState(id)
+    const [precioProducto,setPrecio] = useState(precio)
     
     function sumar (){
         if(numero<=9){
@@ -32,6 +33,8 @@ function ItemCount({nombre,id}) {
         }
     }
     function onAdd(){
+        calcularTotal(total+precio*numero)
+        console.log("el total"+total)
         activado=false
         setActivador(activado)
         if (activado!=true) {
@@ -54,6 +57,7 @@ function ItemCount({nombre,id}) {
         if (activado) {
             setActivador(activado)
         }
+        traerInfo(idProducto)
         
         
         

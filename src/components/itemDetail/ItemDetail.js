@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import ItemCount from "../ItemCount/ItemCount"
 
-function ItemDetail({nombre,id}) {
+function ItemDetail({nombre,id,precio}) {
 
   const [activador,setActivado] = useState()
   
@@ -14,6 +14,7 @@ function ItemDetail({nombre,id}) {
       
         <ItemCount nombre={nombre}
                   id={id}
+                  precio={precio}
         />
        
       </div>
