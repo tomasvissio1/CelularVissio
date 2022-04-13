@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getFirestoneApp } from '../../firebase/Config';
 import ItemDetail from '../itemDetail/ItemDetail';
-import { collection, doc, getDoc, getDocs, getFirestore } from 'firebase/firestore'
+import { collection, doc, getDoc, getDocs, getFirestore, query, where } from 'firebase/firestore'
 
 
 let objetos
@@ -33,6 +33,7 @@ function ItemDetailContainer() {
   useEffect(()=>{
     const querydb = getFirestore()
     const queryCollection = collection(querydb,'productos')
+    const queryFilter = query(queryCollection, where('precio','==',2000))
 
     getDocs(queryCollection)
     .then(resp=> {setProductos(resp.docs.map(item =>({id:item.id,...item.data()})))
@@ -69,10 +70,11 @@ function ItemDetailContainer() {
                 nombre={productos[detalleId].caracteristicas}
                 id={productos[detalleId].id}
                 precio={productos[detalleId].precio}
+                imagen ={productos[detalleId].imagen}
             />
           </div>
         ):(
-          <div>no anda</div>
+          <div><h1 style={{"textAlign":"center"}}>Cargando...</h1></div>
         )}
 
     </div>

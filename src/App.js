@@ -17,7 +17,7 @@ function App() {
     <BrowserRouter>
       <CartContextProvider>
         <NavBar />
-        <Movimiento/>
+        {/* <Movimiento/> */}
           <Routes>
             <Route path='/' element={
             <ItemList/>}/>
