@@ -33,7 +33,6 @@ function ItemDetailContainer() {
   useEffect(()=>{
     const querydb = getFirestore()
     const queryCollection = collection(querydb,'productos')
-    const queryFilter = query(queryCollection, where('precio','==',2000))
 
     getDocs(queryCollection)
     .then(resp=> {setProductos(resp.docs.map(item =>({id:item.id,...item.data()})))
